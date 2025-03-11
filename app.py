@@ -31,9 +31,9 @@ elif page == "Solar Parameters":
 elif page == "Location":
     show_location_predictions()
 
-schedule.every().day.at("7:01").do(send_email_job)
-schedule.every().day.at("11:01").do(send_email_job)
-schedule.every().day.at("15:01").do(send_email_job)
+schedule.every().day.at("8:41").do(send_email_job)
+schedule.every().day.at("9:01").do(send_email_job)
+schedule.every().day.at("10:01").do(send_email_job)
 
 while True:
     schedule.run_pending()
