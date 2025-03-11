@@ -42,7 +42,7 @@ def job():
 
 schedule.every(10).seconds.do(job)
 
-def run_email():
+def run_scheduler():
     while True:
         schedule.run_pending()
         time.sleep(1)
