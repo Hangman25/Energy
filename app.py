@@ -32,11 +32,11 @@ elif page == "Solar Parameters":
 elif page == "Location":
     show_location_predictions()
 
-schedule.every().day.at("08:45").do(send_email_job)
-schedule.every().day.at("10:58","America/Halifax").do(send_email_job)
-schedule.every().day.at("16:01").do(send_email_job)
-
 def run_scheduler():
+    schedule.every().day.at("08:45").do(send_email_job)
+    schedule.every().day.at("10:58","America/Halifax").do(send_email_job)
+    schedule.every().day.at("16:01").do(send_email_job)
+    
     while True:
         schedule.run_pending()
         time.sleep(1)
