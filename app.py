@@ -9,7 +9,7 @@ from scripts.cloud import show_cloud
 from scripts.solar import visualize_csv
 from scripts.location import show_location_predictions
 from scripts.send_email_job import send_email_job
-from threading import Thread
+import threading 
 
 st.set_page_config(layout="wide", page_title="🌤️ Energy Prediction Dashboard")
 
@@ -41,9 +41,9 @@ def run_scheduler():
         schedule.run_pending()
         time.sleep(1)
 
-if 'scheduler_thread' not in st.session_state:
-    st.session_state.scheduler_thread = Thread(target=run_scheduler,daemon=True)
-    st.session_state.scheduler_thread.start()
+#if 'scheduler_thread' not in st.session_state:
+    #st.session_state.scheduler_thread = Thread(target=run_scheduler,daemon=True)
+ #   st.session_state.scheduler_thread.start()
 
 def run_continuously(interval=1):
     """Continuously run, while executing pending jobs at each
