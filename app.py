@@ -33,10 +33,8 @@ elif page == "Location":
     show_location_predictions()
 
 schedule.every().day.at("08:45").do(send_email_job)
-schedule.every().day.at("14:40").do(send_email_job)
+schedule.every().day.at("15:01").do(send_email_job)
 schedule.every().day.at("16:01").do(send_email_job)
-
-schedule.every().minutes.do(send_email_job)
 
 def run_scheduler():
     while True:
@@ -50,3 +48,4 @@ if 'scheduler_thread' not in st.session_state:
 
 #schedule.run_pending()
 #time.sleep(1)
+#schedule.every().minutes.do(send_email_job)
