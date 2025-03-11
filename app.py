@@ -35,5 +35,21 @@ schedule.every().day.at("08:45").do(send_email_job)
 schedule.every().day.at("14:15").do(send_email_job)
 schedule.every().day.at("16:01").do(send_email_job)
 
-schedule.run_pending()
-time.sleep(1)
+
+def job():
+    print("worked email")
+
+schedule.every(10).second.do(job)
+
+def run_email():
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+if 'scheduler_thread' not in st.session_state:
+    st.session_state.scheduler_thread = Thread(target=run_scheduler,daemon=True)
+    st.session_state.scheduler_thread.start()
+        
+
+#schedule.run_pending()
+#time.sleep(1)
