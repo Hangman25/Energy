@@ -39,7 +39,7 @@ schedule.every().day.at("16:01").do(send_email_job)
 def job():
     print("worked email")
 
-schedule.every(10).second.do(job)
+schedule.every(10).seconds.do(job)
 
 def run_email():
     while True:
