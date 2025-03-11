@@ -35,6 +35,5 @@ schedule.every().day.at("08:45").do(send_email_job)
 schedule.every().day.at("09:01").do(send_email_job)
 schedule.every().day.at("10:01").do(send_email_job)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+schedule.run_pending()
+time.sleep(1)
