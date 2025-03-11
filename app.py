@@ -46,6 +46,4 @@ if 'scheduler_thread' not in st.session_state:
     st.session_state.scheduler_thread.start()
         
 
-#schedule.run_pending()
-#time.sleep(1)
 #schedule.every().minutes.do(send_email_job)
