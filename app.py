@@ -32,8 +32,8 @@ elif page == "Location":
     show_location_predictions()
 
 schedule.every().day.at("08:45").do(send_email_job)
-schedule.every().day.at("09:21").do(send_email_job)
-schedule.every().day.at("10:01").do(send_email_job)
+schedule.every().day.at("14:01").do(send_email_job)
+schedule.every().day.at("16:01").do(send_email_job)
 
 schedule.run_pending()
 time.sleep(1)
