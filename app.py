@@ -34,7 +34,7 @@ elif page == "Location":
 
 #def run_scheduler():
 
-schedule.every().day.at("14:27","America/Halifax").do(send_email_job)
+#schedule.every().day.at("14:27","America/Halifax").do(send_email_job)
     #schedule.every().day.at("11:17").do(send_email_job)
   #  schedule.every().day.at("10:58","America/Halifax").do(send_email_job)
    # schedule.every().day.at("16:01").do(send_email_job)
