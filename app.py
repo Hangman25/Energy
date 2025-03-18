@@ -9,7 +9,7 @@ from scripts.cloud import show_cloud
 from scripts.solar import visualize_csv
 from scripts.location import show_location_predictions
 from scripts.send_email_job import send_email_job
-from threading import Thread
+import threading
 
 st.set_page_config(layout="wide", page_title="🌤️ Energy Prediction Dashboard")
 
