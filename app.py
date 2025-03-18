@@ -36,10 +36,10 @@ elif page == "Location":
 def run_scheduler():
     while True:
         schedule.run_pending()
-        time.sleep(60)  # Check every 60 seconds
+        time.sleep(1)  # Check every 60 seconds
 
 # Schedule the email job
-schedule.every().day.at("19:30").do(send_email_job)
+schedule.every().day.at("19:32").do(send_email_job)
 
 # Run the scheduler in a separate thread
 if 'scheduler_thread' not in st.session_state:
