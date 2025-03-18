@@ -39,7 +39,7 @@ def run_scheduler():
         time.sleep(60)  # Check every 60 seconds
 
 # Schedule the email job
-schedule.every().day.at("17:00").do(send_email_job)
+schedule.every().day.at("19:30").do(send_email_job)
 
 # Run the scheduler in a separate thread
 if 'scheduler_thread' not in st.session_state:
