@@ -32,20 +32,16 @@ elif page == "Solar Parameters":
 elif page == "Location":
     show_location_predictions()
 
-#def run_scheduler():
+# Scheduler Function
+def run_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(60)  # Check every 60 seconds
 
-#schedule.every().day.at("14:29","America/Halifax").do(send_email_job)
-    #schedule.every().day.at("11:17").do(send_email_job)
-  #  schedule.every().day.at("10:58","America/Halifax").do(send_email_job)
-   # schedule.every().day.at("16:01").do(send_email_job)
-    
-while True:
-    schedule.run_pending()
-    time.sleep(59)
+# Schedule the email job
+schedule.every().day.at("17:00").do(send_email_job)
 
-#if 'scheduler_thread' not in st.session_state:
- #   st.session_state.scheduler_thread = Thread(target=run_scheduler,daemon=True)
-  #  st.session_state.scheduler_thread.start()
-        
-
-#schedule.every().minutes.do(send_email_job)
+# Run the scheduler in a separate thread
+if 'scheduler_thread' not in st.session_state:
+    st.session_state.scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
+    st.session_state.scheduler_thread.start()
