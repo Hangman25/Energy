@@ -57,7 +57,7 @@ def run_continuously(interval=1):
     return cease_continuous_run
 
 # Schedule the email job
-schedule.every().day.at("19:55", "America/Halifx").do(send_email_job)
+schedule.every(1).minutes.do(send_email_job)
 
 # Start the background thread
 stop_run_continuously = run_continuously()
