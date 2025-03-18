@@ -60,7 +60,7 @@ def run_continuously(interval=1):
 schedule.every(1).minutes.do(send_email_job)
 
 # Start the background thread
-stop_run_continuously = run_continuously(60)
+stop_run_continuously = run_continuously()
 
 # Do some other things...
 # time.sleep(10)
