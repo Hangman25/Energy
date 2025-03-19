@@ -59,9 +59,9 @@ def run_continuously(interval=1):
 # Schedule the email job
 # schedule.every(4).hours.do(send_email_job)
 
-if "jobs_scheduled" not in st.session_state:
-    st.session_state.jobs_scheduled = True
-    schedule.every(2).minutes.do(send_email_job)
+# if "jobs_scheduled" not in st.session_state:
+    # st.session_state.jobs_scheduled = True
+    # schedule.every(2).minutes.do(send_email_job)
 
 # Start the background thread
 # stop_run_continuously = run_continuously()
