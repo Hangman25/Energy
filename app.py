@@ -25,8 +25,8 @@ elif page == "METAR":
     show_metar()
 elif page == "Cloud Forecast":
     show_cloud()
-# elif page == "TAF":
-    # show_taf()
+elif page == "TAF":
+    show_taf()
 elif page == "Solar Parameters":
     visualize_csv("csv/solar_2025.csv")
 elif page == "Location":
