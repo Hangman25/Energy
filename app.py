@@ -67,7 +67,7 @@ if "jobs_scheduled" not in st.session_state:
 stop_run_continuously = run_continuously()
 
 # Do some other things...
-time.sleep(10)
+time.sleep(1)
 
 # Stop the background thread
-stop_run_continuously.set()
+# stop_run_continuously.set()
